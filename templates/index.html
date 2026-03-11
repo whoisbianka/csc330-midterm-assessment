@@ -1,7 +1,38 @@
 {% extends 'base.html' %}
 
-{% block title %}Home - Flask App{% endblock %}
+<!doctype html>
+<html>
+  <head>
+    <title>Unit Converter</title>
+  </head>
+  <body>
+    <h1>Unit Converter</h1>
 
-{% block content %}
-    <h2>Hello, World!</h2>
-{% endblock %}
+    <form method="POST">
+      <input type="text" name="value" placeholder="Enter value" required>
+
+      <select name="unit_from">
+        <option value="m">Meters</option>
+        <option value="ft">Feet</option>
+      </select>
+
+      to
+
+      <select name="unit_to">
+        <option value="ft">Feet</option>
+        <option value="m">Meters</option>
+      </select>
+
+      <button type="submit">Convert</button>
+    </form>
+
+    {% if error %}
+      <p style="color:red;">{{ error }}</p>
+    {% endif %}
+
+    {% if result is not none %}
+      <p>Result: {{ result }}</p>
+    {% endif %}
+  </body>
+</html>
+
