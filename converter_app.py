@@ -59,7 +59,7 @@ def home():
         except ValueError:
             error = "Please enter a valid number."
 
-    return render_template("home.html",
+    return render_template("index.html",
                            result=result,
                            error=error)
 
