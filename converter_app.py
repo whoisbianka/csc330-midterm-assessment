@@ -26,7 +26,7 @@ def kg_to_pounds(kg):
 def pounds_to_kg(pounds):
     return pounds / 2.20462
 
-@app.route("/")
+@app.route("/", methods=["GET", "POST"])
 def home():
     result = None
     error = None
