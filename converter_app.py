@@ -14,11 +14,11 @@ def inches_to_centimeters(inches):
 def centimeters_to_inches(cm):
     return cm / 2.54
 
-def kilometers_to_miles(km):
-    return km * 0.621371
+def kilometers_to_meters(km):
+    return km * 1000
 
-def miles_to_kilometers(miles):
-    return miles / 0.621371 
+def meters_to_kilometers(m):
+    return m / 1000 
 
 def kg_to_pounds(kg):
     return kg * 2.20462
@@ -45,10 +45,10 @@ def home():
                 result = inches_to_centimeters(value)
             elif unit_from == "cm" and unit_to == "in":
                 result = centimeters_to_inches(value)
-            elif unit_from == "km" and unit_to == "mi":
-                result = kilometers_to_miles(value)
-            elif unit_from == "mi" and unit_to == "km":
-                result = miles_to_kilometers(value)
+            elif unit_from == "km" and unit_to == "m":
+                result = kilometers_to_meters(value)
+            elif unit_from == "m" and unit_to == "km":
+                result = meters_to_kilometers(value)
             elif unit_from == "kg" and unit_to == "lb":
                 result = kg_to_pounds(value)
             elif unit_from == "lb" and unit_to == "kg":
