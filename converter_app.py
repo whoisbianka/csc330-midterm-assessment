@@ -37,22 +37,21 @@ def home():
             unit_from = request.form["unit_from"]
             unit_to = request.form["unit_to"]
 
-            # only allow valid combos
             if unit_from == "m" and unit_to == "ft":
                 result = meters_to_feet(value)
             elif unit_from == "ft" and unit_to == "m":
                 result = feet_to_meters(value)
-            elif unit_from == "inches" and unit_to == "cm":
+            elif unit_from == "in" and unit_to == "cm":
                 result = inches_to_centimeters(value)
-            elif unit_from == "cm" and unit_to == "inches":
+            elif unit_from == "cm" and unit_to == "in":
                 result = centimeters_to_inches(value)
-            elif unit_from == "km" and unit_to == "miles":
+            elif unit_from == "km" and unit_to == "mi":
                 result = kilometers_to_miles(value)
-            elif unit_from == "miles" and unit_to == "km":
+            elif unit_from == "mi" and unit_to == "km":
                 result = miles_to_kilometers(value)
-            elif unit_from == "kg" and unit_to == "pounds":
+            elif unit_from == "kg" and unit_to == "lb":
                 result = kg_to_pounds(value)
-            elif unit_from == "pounds" and unit_to == "kg":
+            elif unit_from == "lb" and unit_to == "kg":
                 result = pounds_to_kg(value)
             else:
                 error = "That conversion is not supported yet."
